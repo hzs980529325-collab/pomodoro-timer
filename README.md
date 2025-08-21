@@ -1,2 +1,2 @@
 # pomodoro-timer
-番茄钟联系
+番茄钟练习
