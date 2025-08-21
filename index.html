@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>番茄工作法计时器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="timer-container">
+            <div class="mode-switch">
+                <button id="workModeBtn" class="mode-btn active">工作时间</button>
+                <button id="breakModeBtn" class="mode-btn">休息时间</button>
+            </div>
+            <div class="progress-ring-container">
+                <svg class="progress-ring" width="320" height="320">
+                    <circle class="progress-ring-circle-bg" cx="160" cy="160" r="140" />
+                    <circle class="progress-ring-circle" cx="160" cy="160" r="140" />
+                </svg>
+                <div class="timer" id="timer">25:00</div>
+            </div>
+            <div class="controls">
+                <button id="startBtn" class="btn">开始</button>
+                <button id="resetBtn" class="btn">重置</button>
+            </div>
+            <div class="settings">
+                <div class="setting-item">
+                    <label for="workTime">工作时间（分钟）：</label>
+                    <input type="number" id="workTime" value="25" min="1" max="60">
+                </div>
+                <div class="setting-item">
+                    <label for="breakTime">休息时间（分钟）：</label>
+                    <input type="number" id="breakTime" value="5" min="1" max="30">
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="notificationSound" src="notification.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
